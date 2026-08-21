@@ -836,12 +836,26 @@
     .brand-name{font-size:20px;}
     .nav-row{gap:12px;}
     .nav-cta{gap:10px; flex-shrink:0;}
+    /* Full 16:9 title card — cover + tall hero was cropping baked-in text */
+    .hero{
+      min-height:0;
+      width:100%;
+      aspect-ratio:16 / 9;
+      margin-top:68px;
+    }
+    .hero video, .hero .hero-fallback{
+      object-fit:contain;
+      object-position:center center;
+      background:var(--ink);
+    }
+    .hero::before{
+      background:
+        linear-gradient(180deg, rgba(15,10,7,0.18) 0%, rgba(15,10,7,0.04) 30%, rgba(15,10,7,0.06) 72%, rgba(15,10,7,0.45) 100%);
+    }
   }
 
   @media (max-width:760px){
     section{padding:74px 0;}
-    .hero{min-height:100svh;}
-    .dish-grid{grid-template-columns:1fr;}
     .dish-grid{grid-template-columns:1fr;}
     .why-grid{grid-template-columns:1fr;}
     .gal-carousel-viewport{aspect-ratio:3/4; max-height:72svh;}
