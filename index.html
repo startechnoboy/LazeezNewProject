@@ -156,12 +156,13 @@
   }
   .brand:hover{opacity:.92;}
   .brand-logo{
-    height:52px;
+    height:64px;
     width:auto;
-    max-width:min(36vw, 180px);
+    max-width:min(58vw, 280px);
     object-fit:contain;
-    border-radius:4px;
-    background:#5a1218;
+    object-position:left center;
+    border-radius:6px;
+    background:#fbf7ee;
     flex:none;
   }
   .brand-name{
@@ -193,8 +194,7 @@
     height:clamp(36px, 4.6vw, 46px);
     max-width:min(42vw, 220px);
   }
-  header.scrolled .brand-logo{height:44px;}
-  header.scrolled .brand .lazeez-mark{height:clamp(32px, 4vw, 40px);}
+  header.scrolled .brand-logo{height:54px;}
   .hero-lead .lazeez-mark{
     height:clamp(56px, 11vw, 110px);
     max-width:min(92vw, 520px);
@@ -426,6 +426,25 @@
   .section-head{max-width:640px; margin-bottom:52px;}
   .section-head h2{font-size:clamp(32px,4.4vw,52px); margin-top:14px;}
   .section-head p{color:var(--smoke); margin-top:16px; font-size:17px; max-width:520px;}
+  .headline-with-mark{
+    line-height:1.18;
+    overflow:visible;
+  }
+  .lazeez-word{
+    height:1em;
+    width:auto;
+    display:inline-block;
+    vertical-align:-0.12em;
+    object-fit:contain;
+    margin:0 0.06em;
+  }
+  .visit .lazeez-word{
+    height:1.55em;
+    vertical-align:-0.36em;
+    background:#000;
+    border-radius:4px;
+    padding:0.05em 0.14em 0.08em;
+  }
 
   /* ---------- About ---------- */
   .about{background:var(--ink);}
@@ -970,8 +989,7 @@
     header{padding:12px 0;}
     nav.links, .nav-cta .btn-line{display:none;}
     .burger{display:flex; flex-shrink:0;}
-    .brand-logo{height:44px; max-width:min(32vw, 120px);}
-    .brand .lazeez-mark{height:38px;}
+    .brand-logo{height:50px; max-width:min(54vw, 220px);}
     .nav-row{gap:12px;}
     .nav-cta{gap:10px; flex-shrink:0;}
     .hero{
@@ -1002,8 +1020,7 @@
   @media (max-width:420px){
     .wrap{padding:0 16px;}
     .brand{gap:8px;}
-    .brand-logo{height:38px; max-width:min(32vw, 120px);}
-    .brand .lazeez-mark{height:32px;}
+    .brand-logo{height:44px; max-width:min(56vw, 200px);}
     .brand-loc{font-size:8px; letter-spacing:.18em;}
     .nav-cta .btn-solid{padding:11px 14px; font-size:13px;}
     .hero-ctas{width:100%;}
@@ -1018,11 +1035,7 @@
 <header id="siteHeader">
   <div class="wrap nav-row">
     <a href="#top" class="brand" aria-label="Lazeez NewTown home">
-      <img class="brand-logo" src="./assets/logo.jpeg" alt="">
-      <span class="brand-name">
-        <img class="lazeez-mark" src="./assets/lazeez-wordmark.png" alt="">
-        <!-- <span class="brand-loc">New Town</span> -->
-      </span>
+      <img class="brand-logo" src="./assets/lazeez-new-town-header-logo.png" alt="Lazeez New Town">
     </a>
 
     <nav class="links" aria-label="Primary">
@@ -1076,7 +1089,7 @@
       <div>
         <p class="eyebrow">New Town, Kolkata</p>
         <h1 class="visually-hidden">Lazeez NewTown</h1>
-        <img class="lazeez-mark" src="./assets/lazeez-wordmark.png" alt="">
+        <img class="lazeez-mark" src="./assets/lazeez-new-town-logo.png" alt="Lazeez New Town">
         <p class="hero-tagline">
           An AC Family Restaurant for <strong>Tandoor kebabs</strong>, <strong>Chinese Items</strong> and <strong>Street-Style Rolls & Many More</strong> — grilled fresh and served with heart, right by Shapoorji C&nbsp;Gate.
         </p>
@@ -1128,8 +1141,8 @@
     </div>
     <div class="about-copy reveal">
       <p class="eyebrow">Our Kitchen</p>
-      <h2>From the tandoor<br>to your table.</h2>
-      <p>Lazeez NewTown is an AC family restaurant tucked into the Shapoorji C Gate stretch of Action Area III — the kind of place regulars walk to for a quick roll and stay for a full spread. Every skewer you see hanging in our kitchen window is marinated in-house and grilled fresh through the evening, not held and reheated.</p>
+      <h2>From the tandoor<br>to your table.</h2><br>
+      <p>Best Chinese Restaurant in Newtown – Authentic Flavours & Delicious Dining Looking for the best Chinese restaurant in Newtown for delicious and authentic Chinese cuisine? Enjoy a wide variety of flavourful dishes prepared with fresh ingredients, aromatic spices, and traditional cooking techniques. From popular noodles and fried rice to mouth-watering starters and classic Chinese main courses, there’s something for every food lover.</p>
       <p>Behind the glass, our kitchen runs the way a family restaurant should: capped and gloved staff, an open charcoal grill, and a menu built around Kolkata's favourite Mughlai flavours.</p>
       <ul class="about-points">
         <li><span class="dot"></span> Charcoal tandoor kebabs, grilled to order</li>
@@ -1146,7 +1159,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Our Menu</p>
-      <h2>Taste of Lazeez</h2>
+      <h2 class="headline-with-mark">Taste of <img class="lazeez-word" src="./assets/lazeez-wordmark.png" alt="Lazeez"> New Town</h2>
       <p>Rolls, Chinese, biryani, thalis, tandoor, combos and more — a look at what we cook every day at New Town.</p>
       <div class="legend">
         <span class="veg"><i></i> Veg</span>
@@ -1425,7 +1438,7 @@
     <div class="section-head reveal">
       <p class="eyebrow">Public Reviews</p>
       <h2>What guests say</h2>
-      <p>Hear from diners who have been to Lazeez NewTown</p>
+      <!-- <p>Hear from diners who have been to Lazeez NewTown</p> -->
     </div>
 
     <div class="reviews-media reveal">
@@ -1519,7 +1532,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Visit Us</p>
-      <h2>Find Lazeez NewTown</h2>
+      <h2 class="headline-with-mark">Find <img class="lazeez-word" src="./assets/lazeez-words.png" alt="Lazeez"> New Town</h2>
       <p style="color:#6b5a48;">By the Shapoorji C Gate stretch, Action Area III — easy to spot after dark.</p>
     </div>
 
@@ -1600,7 +1613,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img class="lazeez-mark" src="./assets/lazeez-wordmark.png" alt="Lazeez">
+        <img class="lazeez-mark" src="./assets/lazeez-new-town-logo.png" alt="Lazeez New Town">
         <p>New Town's AC family restaurant for tandoor kebabs, biryani and Kolkata-style rolls. Dine-in, takeaway and delivery from Shapoorji C Gate.</p>
       </div>
       <div class="foot-col">
