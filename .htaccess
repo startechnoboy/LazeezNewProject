@@ -1,0 +1,12 @@
+# Hostinger (Linux) is case-sensitive. Media lives in /Assets.
+# Keep lowercase /assets URLs working if an old page or cache still requests them.
+Options -MultiViews
+AddType video/mp4 .mp4
+AddType image/jpeg .jpeg .jpg
+AddType image/png .png
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^assets/(.*)$ Assets/$1 [L]
+</IfModule>
